@@ -1,94 +1,91 @@
-# loan-default-risk-dashboard
-Power BI dashboard analyzing loan default risk.
+# 💳 Loan Default Risk Dashboard
 
-PROJECT OVERVIEW
+## Project Overview
 
-This project analyzes loan default patterns to identify key risk factors affecting borrower repayment behavior. Using Power BI, I built an interactive dashboard to explore how variables such as debt-to-income ratio (DTI), income level, credit score, and loan size influence default rates.
+Loan defaults represent one of the most significant risks in the lending industry. This project analyzes **130,138 loan records** to identify key risk factors and patterns associated with loan default, visualized through an interactive Power BI dashboard.
 
+The goal was to help lending institutions better understand which borrower profiles, loan types, and regional patterns are most associated with default risk — enabling smarter credit decisions and risk prioritization.
 
-BUSINESS PROBLEM
+---
 
-Financial institutions face significant losses from loan defaults. Identifying high-risk borrower segments early can help improve lending decisions and reduce financial risk.
+## 🛠️ Tools Used
 
+- **Power BI Desktop** — Data modeling, DAX measures, and interactive dashboard
+- **Microsoft Excel** — Data preparation and pivot analysis
 
-OBJECTIVE
+---
 
-The goal of this project is to:
-- Measure overall default rate.
-- Identify high-risk borrower segments.
-- Understand how financial and credit factors influence default behavior.
-- Provide insights that support better lending decisions.
+## 📁 Dataset
 
+| Property | Detail |
+|---|---|
+| Total Records | 130,138 loans |
+| Total Features | 39 columns |
+| Overall Default Rate | 24.55% |
+| Year Covered | 2019 |
 
-DATA DESCRIPTION
+**Key columns include:**
+- `loan_amount`, `Loan Band`, `rate_of_interest`, `term`
+- `Credit_Score`, `Credit Band`, `Credit_Worthiness`
+- `DTI Category`, `LTV`, `LTV Category`
+- `income`, `Income Band`, `Gender`, `age`
+- `loan_type`, `loan_purpose`, `Region`
+- `Status` — target variable (1 = Default, 0 = No Default)
 
-The dataset contains loan-level information including:
-- Loan ID
-- Customer ID
-- Default status (1 = default, 0 = non-default)
-- Income level
-- Debt-to-Income (DTI) category
-- Credit score band
-- Loan size
+---
 
+## 🔍 Key Findings
 
-TOOLS & TECHNIQUES
-- Excel (Initial data cleaning)
-- Power Query (Data transformation)
-- Power BI (Dashboard & Visualization)
-- DAX (Metrics Calculation)
-- Data modeling & categorization
-- Dashboard design principles
+### 1. Overall Default Rate of 24.55%
+Nearly 1 in 4 loans in the dataset resulted in default — representing **31,952 defaulted loans** out of 130,138 total, highlighting significant risk exposure across the portfolio.
 
+### 2. Unknown DTI Borrowers Had the Highest Default Rate
+Borrowers with unknown DTI (Debt-to-Income) data had a **67.49% default rate**, compared to Low DTI (27.66%), High DTI (19.18%), and Medium DTI (12.14%). This reveals that missing financial data is itself a strong risk signal.
 
-KEY METRICS
-- Default Rate = Average of default flag
-- Total Loans
-- Total Customers
+### 3. High Income Borrowers Defaulted Most
+Surprisingly, **high income borrowers had the highest default rate at 40%**, followed by Medium income (31.03%) and Low income (24.54%). This suggests income alone is not a reliable predictor of repayment behavior and must be combined with other factors.
 
+### 4. Small Loans Defaulted More Than Large Loans
+Counterintuitively, **small loans had the highest default rate at 37.02%**, compared to 26.10% for medium and 21.96% for large loans. This challenges the common assumption that larger loans carry more risk.
 
-DASHBOARD FEATURES
+### 5. Credit Score Band Showed Minimal Differentiation
+Both Fair and Good credit bands showed nearly identical default rates at approximately **24.55%**, suggesting that the credit scoring bands in this dataset may need refinement as a standalone risk predictor.
 
-The dashboard includes:
-- KPI cards showing overall performance.
-- Segmented analysis by:
+---
 
-  - DTI category
-  
-  - Income level
-  
-  - Credit score band
-  
-  - Loan size
-  
-- Clean, user-friendly layout for quick insights.
+## 📊 Dashboard Highlights
 
+The Power BI dashboard includes:
+- **Default Rate by DTI Category** — visualizing how debt-to-income ratio affects default likelihood
+- **Default Rate by Income Level** — comparing default rates across income bands
+- **Default Rate by Credit Score Band** — showing how creditworthiness correlates with default risk
+- **Default Rate by Loan Size** — revealing the counterintuitive relationship between loan size and default
 
-KEY INSIGHTS
-- Borrowers with high debt, low income, and low credit scores are more likely to default, highlighting key risk factors that lenders should monitor.
-- Higher DTI correlates with increased default rates.
-- Lower income groups show higher financial vulnerability.
-- Smaller loans show relatively higher default rates.
+---
 
+## 💡 Business Recommendations
 
-BUSINESS IMPACT
+1. **Flag borrowers with missing DTI data** — A 67.49% default rate makes unknown DTI the strongest risk signal in the dataset
+2. **Reassess income-based risk models** — High income alone does not predict repayment; it must be combined with DTI and loan size for accuracy
+3. **Apply stricter screening to small loans** — Their higher default rate suggests current credit checks may be insufficient for this segment
+4. **Refine credit score banding** — The near-identical default rates across credit bands suggest the current bands lack discriminatory power and need recalibration
 
-This analysis can help financial institutions:
-- Identify high-risk customers before loan approval.
-- Adjust lending strategies based on risk segments.
-- Improve credit assessment models.
-- Reduce default-related losses.
+---
 
+## 📂 Project Structure
 
-WHAT I LEARNT
+```
+loan-default-risk-dashboard/
+│
+├── Book3.xlsx                        # Raw dataset
+├── Loan_Default_Risk_Dashboard.pbix  # Power BI dashboard file
+└── README.md                         # Project documentation
+```
 
-Through this project, I learnt:
-- How to clean and prepare data using Power Query.
-- Writing DAX measures for business metrics.
-- Designing user-friendly dashboards.
-- Translating data into actionable insights.
+---
 
+## 👤 Author
 
-FUTURE IMPROVEMENTS
-- Add predictive modeling for default risk.
-- Include time-based trend analysis.
+**Toluwanimi Awofisayo**
+Mathematics Graduate | Data Analyst
+📧 irewamiriawofisayo@gmail.com
