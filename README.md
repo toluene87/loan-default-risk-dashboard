@@ -88,4 +88,4 @@ loan-default-risk-dashboard/
 
 **Toluwanimi Awofisayo**
 Mathematics Graduate | Data Analyst
-📧 irewamiriawofisayo@gmail.com
+📧 temijasopelincoln@gmail.com  
